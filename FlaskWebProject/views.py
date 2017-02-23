@@ -3,13 +3,13 @@ from flask_restful import Resource, Api, reqparse
 from flask_pymongo import PyMongo
 from os import environ
 
+app = Api(app)
 
 app.config['MONGO_URI'] = "mongodb://isiemphours:3A9cNCEUYSK6Ut7lP8HHVCx8bvKJPnTnmgCnU8VsYhb5w5T9etfxdPorxYHj17kYnh74dtLl7709M3T8uV4C1Q==@isiemphours.documents.azure.com:10250/people?ssl=true&ssl_cert_reqs=CERT_NONE"
 
 
 mongo = PyMongo(app, config_prefix='MONGO')
 
-api = Api(app)
 
 parser = reqparse.RequestParser()
 parser.add_argument('EmployeeID', required=True, help='Employee ID is required', type=int)
