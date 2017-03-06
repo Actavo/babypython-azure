@@ -17,7 +17,7 @@ parser.add_argument('EmployeeID', required=True, help='Employee ID is required',
 parser.add_argument('firstname')
 parser.add_argument('lastname')
 parser.add_argument('SupervisorName')
-parser.add_argument('SupervisorID', required=True, help='Supervisor ID is required', type=int)
+parser.add_argument('SupervisorID', type=int)
 parser.add_argument('role')
 parser.add_argument('active', default=True, type=bool)
 parser.add_argument('hours', type=list, location='json')
